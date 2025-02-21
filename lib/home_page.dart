@@ -345,7 +345,6 @@ class _DevelopersPageState extends State<DevelopersPage> {
 class StoriesSection extends StatelessWidget {
   final List<String> stories = [
     'assets/s1.jpg',
-    'assets/s10.jpg',
     'assets/s2.jpg',
     'assets/s3.jpg',
     'assets/s4.jpg',
@@ -355,15 +354,16 @@ class StoriesSection extends StatelessWidget {
     'assets/s8.jpg',
     'assets/s9.jpg',
     'assets/s10.jpg',
-    'assets/s10.jpg',
-    'assets/s10.jpg',
-    'assets/s10.jpg',
-    'assets/s10.jpg',
-    'assets/s10.jpg',
-    'assets/s10.jpg',
-    'assets/s10.jpg',
-    'assets/s10.jpg',
-    'assets/s10.jpg',
+    'assets/s11.jpg',
+    'assets/s12.jpg',
+    'assets/s13.jpg',
+    'assets/s14.jpg',
+    'assets/s15.jpg',
+    'assets/s16.jpg',
+    'assets/s17.jpg',
+    'assets/s20.jpg',
+    'assets/s20.jpg',
+    'assets/s20.jpg',
   ];
   @override
   Widget build(BuildContext context) {
