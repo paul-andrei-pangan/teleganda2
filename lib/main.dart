@@ -138,3 +138,36 @@ class _TelegramLoginState extends State<TelegramLogin>
     ),
     );
   }
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+        navigationBar: const CupertinoNavigationBar(
+          backgroundColor: Color(0xFF0088cc),
+          middle: Text("Login"),
+        ),
+        child: Padding(
+        padding: const EdgeInsets.all(20.0),
+    child: Column(
+    mainAxisAlignment: MainAxisAlignment.start,
+    children: [
+    const SizedBox(height: 30),
+    const Icon(
+    Icons.telegram,
+    size: 100,
+    color: Color(0xFF0088cc),
+    ),
+    const SizedBox(height: 10),
+    const Text(
+    "TeleGanda",
+    style: TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+    color: Color(0xFF0088cc),
+    ),
+    ),
+    const SizedBox(height: 10),
+    const Text(
+    "Login to your account",
+    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+    ),
+    const SizedBox(height: 20),
