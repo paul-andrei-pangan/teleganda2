@@ -192,7 +192,7 @@ class _DevelopersPageState extends State<DevelopersPage> {
   List<Map<String, String>> developers = [
     {
       'name': 'James',
-      'image': 'assets/dev1.jpg',
+      'image': 'images/dev3.jpg',
       'role': 'Frontend Developer',
       'address': '123 Main St, Cityville',
       'age': '28',
@@ -201,7 +201,7 @@ class _DevelopersPageState extends State<DevelopersPage> {
     },
     {
       'name': 'Paul',
-      'image': 'assets/dev2.jpg',
+      'image': 'images/dev2.jpg',
       'role': 'Backend Developer',
       'address': '456 Oak St, Townsville',
       'age': '32',
@@ -210,7 +210,7 @@ class _DevelopersPageState extends State<DevelopersPage> {
     },
     {
       'name': 'Aira',
-      'image': 'assets/dev3.jpg',
+      'image': 'images/dev1.jpg',
       'role': 'UI/UX Designer',
       'address': '789 Pine St, Villagetown',
       'age': '26',
@@ -219,7 +219,7 @@ class _DevelopersPageState extends State<DevelopersPage> {
     },
     {
       'name': 'Chris',
-      'image': 'assets/dev4.jpg',
+      'image': 'images/dev5.jpg',
       'role': 'Project Manager',
       'address': '101 Maple St, Citytown',
       'age': '35',
@@ -228,7 +228,7 @@ class _DevelopersPageState extends State<DevelopersPage> {
     },
     {
       'name': 'Rein',
-      'image': 'assets/dev5.jpg',
+      'image': 'images/dev4.jpg',
       'role': 'Full Stack Developer',
       'address': '202 Birch St, Uptown',
       'age': '30',
@@ -344,26 +344,26 @@ class _DevelopersPageState extends State<DevelopersPage> {
 // 📌 Stories Section
 class StoriesSection extends StatelessWidget {
   final List<String> stories = [
-    'assets/s1.jpg',
-    'assets/s2.jpg',
-    'assets/s3.jpg',
-    'assets/s4.jpg',
-    'assets/s5.jpg',
-    'assets/s6.jpg',
-    'assets/s7.jpg',
-    'assets/s8.jpg',
-    'assets/s9.jpg',
-    'assets/s10.jpg',
-    'assets/s11.jpg',
-    'assets/s12.jpg',
-    'assets/s13.jpg',
-    'assets/s14.jpg',
-    'assets/s15.jpg',
-    'assets/s16.jpg',
-    'assets/s17.jpg',
-    'assets/s20.jpg',
-    'assets/s20.jpg',
-    'assets/s20.jpg',
+    'images/s1.jpg',
+    'images/s2.jpg',
+    'images/s3.jpg',
+    'images/s4.jpg',
+    'images/s5.jpg',
+    'images/s6.jpg',
+    'images/s7.jpg',
+    'images/s8.jpg',
+    'images/s9.jpg',
+    'images/s10.jpg',
+    'images/s11.jpg',
+    'images/s12.jpg',
+    'images/s13.jpg',
+    'images/s14.jpg',
+    'images/s15.jpg',
+    'images/s16.jpg',
+    'images/s17.jpg',
+    'images/s20.jpg',
+    'images/s20.jpg',
+    'images/s20.jpg',
   ];
   @override
   Widget build(BuildContext context) {
