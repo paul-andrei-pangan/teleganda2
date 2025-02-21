@@ -236,3 +236,67 @@ class _DevelopersPageState extends State<DevelopersPage> {
       'email': 'rein@example.com'
     },
   ];
+  Map<String, String>? selectedDeveloper;
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Developers'),
+        leading: CupertinoButton(
+          padding: EdgeInsets.zero,
+          child: Icon(CupertinoIcons.back),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      child: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Telegram-like title with icon above the developers
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    CupertinoIcons.app, // Icon similar to Telegram
+                    size: 30,
+                    color: CupertinoColors.activeBlue,
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    'TeleGanda', // Large Title
+                    style: TextStyle(
+                      fontSize: 60,
+                      fontWeight: FontWeight.bold,
+                      color: CupertinoColors.activeBlue,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20), // Space between title and images
+              // Top row with 2 developers
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _developerItem(developers[0], context),
+                  _developerItem(developers[1], context),
+                ],
+              ),
+              SizedBox(height: 20), // Space between rows
+              // Bottom row with 3 developers
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _developerItem(developers[2], context),
+                  _developerItem(developers[3], context),
+                  _developerItem(developers[4], context),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
