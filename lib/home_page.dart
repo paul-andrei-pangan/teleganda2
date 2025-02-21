@@ -365,4 +365,44 @@ class StoriesSection extends StatelessWidget {
     'assets/s10.jpg', // Additional story image
     'assets/s10.jpg', // Additional story image
   ];
-
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+    Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+    child: Column(
+    children: [
+    ClipOval(
+    child: Container(
+    width: 60,
+    height: 60,
+    color: Colors.grey[300],
+    child: Icon(Icons.add, size: 30, color: Colors.black),
+    ),
+    ),
+    SizedBox(height: 5),
+    Text("Your Story", style: TextStyle(fontSize: 12)),
+    ],
+    ),
+    ),
+    ...stories.map((story) => GestureDetector(
+    onTap: () => Navigator.push(
+    context,
+    CupertinoPageRoute(
+    builder: (context) => StoryViewerPage(imagePath: story),
+    ),
+    ),
+    child: Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 6.0),
+    child: Column(
+    children: [
+    ClipOval(
+    child: Container(
+    width: 60,
+    height: 60,
+    decoration: BoxDecoration(
+    shape: BoxShape.circle,
+    border: Border.all(color: Colors.blue, width: 2), // Border outline
+    ),
