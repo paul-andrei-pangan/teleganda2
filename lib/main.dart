@@ -171,3 +171,71 @@ class _TelegramLoginState extends State<TelegramLogin>
     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
     ),
     const SizedBox(height: 20),
+      // Username field with floating label effect (moved text to the right)
+      _buildAnimatedTextField(
+        controller: _usernameController,
+        placeholder: "Username",
+        prefix: const Padding(
+          padding: EdgeInsets.only(left: 10),
+          child: Icon(CupertinoIcons.person, color: CupertinoColors.systemGrey),
+        ),
+        isHovering: _isHoveringUsername,
+        onEnter: () => setState(() => _isHoveringUsername = true),
+        onExit: () => setState(() => _isHoveringUsername = false),
+      ),
+
+      const SizedBox(height: 10),
+
+      // Password field with floating label effect (moved text to the right)
+      _buildAnimatedTextField(
+        controller: _passwordController,
+        placeholder: "Password",
+        obscureText: _obscureText,
+        prefix: const Padding(
+          padding: EdgeInsets.only(left: 10),
+          child: Icon(CupertinoIcons.lock, color: CupertinoColors.systemGrey),
+        ),
+        suffix: CupertinoButton(
+          padding: EdgeInsets.zero,
+          onPressed: () {
+            setState(() {
+              _obscureText = !_obscureText;
+            });
+          },
+          child: Icon(
+            _obscureText ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
+            color: CupertinoColors.systemGrey,
+          ),
+        ),
+        isHovering: _isHoveringPassword,
+        onEnter: () => setState(() => _isHoveringPassword = true),
+        onExit: () => setState(() => _isHoveringPassword = false),
+      ),
+
+      const SizedBox(height: 10),
+
+      if (errorMessage != null)
+        Text(
+          errorMessage!,
+          style: const TextStyle(color: Colors.red, fontSize: 14),
+        ),
+
+      const SizedBox(height: 10),
+
+      SizedBox(
+        width: double.infinity,
+        child: CupertinoButton(
+          color: const Color(0xFF0088cc),
+          child: const Text(
+            "Login",
+            style: TextStyle(color: Colors.white),
+          ),
+          onPressed: () => _login(context),
+        ),
+      ),
+    ],
+    ),
+        ),
+    );
+  }
+}
