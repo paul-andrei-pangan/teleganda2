@@ -429,4 +429,92 @@ class StoriesSection extends StatelessWidget {
     );
   }
 }
+class StoryViewerPage extends StatelessWidget {
+  final String imagePath;
 
+  const StoryViewerPage({Key? key, required this.imagePath}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Story Viewer'),
+        leading: CupertinoButton(
+          padding: EdgeInsets.zero,
+          child: Icon(CupertinoIcons.back),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      child: Center(
+        child: Image.asset(imagePath),
+      ),
+    );
+  }
+}
+
+// 📌 Chat List
+class ChatList extends StatelessWidget {
+  final String searchQuery;
+  const ChatList({super.key, required this.searchQuery});
+
+  @override
+  Widget build(BuildContext context) {
+    List<Map<String, String>> chats = [
+      {
+        'name': 'James Draizen Dizon',
+        'message': 'Canceled Call',
+        'image': 'assets/dev1.jpg',
+        'address': 'San Roque, Sta Ana, Pampanga',
+        'age': '18',
+        'contact': '09453212342',
+        'email': 'james.dizon@egmail.com',
+      },
+      {
+        'name': 'Paul Andrei Pangan',
+        'message': '<Missed Call>',
+        'image': 'assets/dev2.jpg',
+        'address': 'San Roque, Sta Ana, Pampanga',
+        'age': '15',
+        'contact': '0943543212',
+        'email': 'paulandrei@gmail.com',
+      },
+      {
+        'name': 'Aira Mae Paraungao',
+        'message': 'Tara',
+        'image': 'assets/dev3.jpg',
+        'address': 'Matamo, Arayat',
+        'age': '30',
+        'contact': '0954565423',
+        'email': 'paulandrei@gmail.com',
+      },
+      {
+        'name': 'Chris Anne De Quiroz',
+        'message': 'lub tana',
+        'image': 'assets/dev4.jpg',
+        'address': 'San Nicolas, Sta Ana, Pampanga',
+        'age': '15',
+        'contact': '09546575654',
+        'email': 'paulandrei@gmail.com',
+      },
+      {
+        'name': 'Rein Heart Palabasan',
+        'message': 'tara lulu',
+        'image': 'assets/dev5.jpg',
+        'address': 'San Joaquin, Sta Ana, Pampanga',
+        'age': '15',
+        'contact': '094324234326',
+        'email': 'paulandrei@gmail.com',
+      },
+    ];
+
+    // Filter chats based on the search query
+    List<Map<String, String>> filteredChats = chats.where((chat) {
+      return chat['name']!.toLowerCase().contains(searchQuery);
+    }).toList();
+
+    return CupertinoScrollbar(
+      child: ListView(
+        children: filteredChats.map((chat) => _chatItem(context, chat)).toList(),
+      ),
+    );
+  }
