@@ -126,3 +126,39 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+// 📌 Show Developers List
+  void _showDevelopers(BuildContext context) {
+    Navigator.pop(context); // Close Sidebar
+    Navigator.push(
+      context,
+      CupertinoPageRoute(
+        builder: (context) => DevelopersPage(),
+      ),
+    );
+  }
+
+  // 📌 Logout Confirmation
+  void _showLogoutPopup(BuildContext context) {
+    showCupertinoDialog(
+      context: context,
+      builder: (_) => CupertinoAlertDialog(
+        title: Text('Logout'),
+        content: Text('Are you sure you want to logout?'),
+        actions: [
+          CupertinoDialogAction(
+            child: Text('Cancel'),
+            onPressed: () => Navigator.pop(context),
+          ),
+          CupertinoDialogAction(
+            child: Text('OK', style: TextStyle(color: CupertinoColors.destructiveRed)),
+            onPressed: () {
+              Navigator.pop(context); // Close the dialog
+              Navigator.pushNamedAndRemoveUntil(
+                  context, '/login', (route) => false);
+
+            },
+          ),
+        ],
+      ),
+    );
+  }
