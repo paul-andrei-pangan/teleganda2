@@ -480,7 +480,7 @@ class ChatList extends StatelessWidget {
       },
       {
         'name': 'Aira Mae Paraungao',
-        'message': 'Tara',
+        'message': 'crisdog',
         'image': 'images/dev1.jpg',
         'address': 'Matamo, Arayat',
         'age': '30',
