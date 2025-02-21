@@ -299,4 +299,45 @@ class _DevelopersPageState extends State<DevelopersPage> {
       ),
     );
   }
+  // 📌 Developer Item
+  Widget _developerItem(Map<String, String> dev, BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: GestureDetector(
+        onTap: () {
+          setState(() {
+            selectedDeveloper = selectedDeveloper == dev ? null : dev; // Toggle developer info visibility
+          });
+        },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Center image and name vertically
+          children: [
+            Row(
+              children: [
+                CircleAvatar(radius: 40, backgroundImage: AssetImage(dev['image']!)),
+                SizedBox(width: 10),
+                selectedDeveloper == dev
+                    ? Text(dev['name']!, style: TextStyle(fontSize: 18))
+                    : SizedBox.shrink(),
+              ],
+            ),
+            SizedBox(height: 10),
+            // Display information below image
+            selectedDeveloper == dev
+                ? Column(
+              children: [
+                Text('Role: ${dev['role']}'),
+                Text('Address: ${dev['address']}'),
+                Text('Age: ${dev['age']}'),
+                Text('Contact: ${dev['contact']}'),
+                Text('Email: ${dev['email']}'),
+              ],
+            )
+                : SizedBox.shrink(),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
