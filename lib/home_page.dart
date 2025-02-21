@@ -518,3 +518,81 @@ class ChatList extends StatelessWidget {
       ),
     );
   }
+  Widget _chatItem(BuildContext context, Map<String, String> chat) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      child: Row(
+        children: [
+          // ✅ Ripple Effect + Border Outline sa Profile Image
+          Material(
+            shape: const CircleBorder(),
+            clipBehavior: Clip.antiAlias,
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () => _showProfile(context, chat),
+              splashColor: Colors.blue.withOpacity(0.3), // Ripple color
+              child: Container(
+                padding: EdgeInsets.all(2), // Border padding
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.blue, width: 2), // 🔥 Border Outline
+                ),
+                child: CircleAvatar(radius: 30, backgroundImage: AssetImage(chat['image']!)),
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(chat['name']!, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 4),
+              Text(chat['message']!, style: const TextStyle(fontSize: 15, color: CupertinoColors.systemGrey)),
+            ],
+          ),
+          const Spacer(),
+          const Icon(CupertinoIcons.chevron_forward, color: CupertinoColors.systemGrey),
+        ],
+      ),
+    );
+  }
+
+  // 📌 Function to Show Profile
+  void _showProfile(BuildContext context, Map<String, String> chat) {
+    showCupertinoDialog(
+      context: context,
+      builder: (_) => CupertinoAlertDialog(
+        title: Text(chat['name']!),
+        content: Column(
+          children: [
+            const SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.all(3), // Border padding
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.blue, width: 3), // 🔥 Border Outline
+              ),
+              child: CircleAvatar(radius: 50, backgroundImage: AssetImage(chat['image']!)),
+            ),
+            const SizedBox(height: 10),
+            Text("Address: ${chat['address']}"),
+            Text("Age: ${chat['age']}"),
+            Text("Contact: ${chat['contact']}"),
+            Text("Email: ${chat['email']}"),
+          ],
+        ),
+        actions: [
+          CupertinoDialogAction(
+            child: const Text(
+              "Close",
+              style: TextStyle(color: CupertinoColors.destructiveRed), // Red color for close
+            ),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
