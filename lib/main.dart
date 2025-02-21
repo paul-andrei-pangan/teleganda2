@@ -75,3 +75,34 @@ class _TelegramLoginState extends State<TelegramLogin>
       }
     });
   }
+
+  Widget _buildAnimatedTextField({
+    required TextEditingController controller,
+    required String placeholder,
+    required Widget prefix,
+    bool obscureText = false,
+    Widget? suffix,
+    required bool isHovering,
+    required VoidCallback onEnter,
+    required VoidCallback onExit,
+  }) {
+    return MouseRegion(
+        onEnter: (_) => onEnter(),
+    onExit: (_) => onExit(),
+    child: Stack(
+    children: [
+    AnimatedBuilder(
+    animation: _controller,
+    builder: (context, child) {
+    return Container(
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(10),
+    border: Border.all(color: _colorAnimation.value ?? Colors.blue, width: 2),
+    boxShadow: [
+    BoxShadow(
+    color: _colorAnimation.value?.withOpacity(0.5) ?? Colors.blue.withOpacity(0.5),
+    blurRadius: 8,
+    spreadRadius: 2,
+    ),
+    ],
+    ),
