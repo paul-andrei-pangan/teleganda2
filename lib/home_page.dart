@@ -162,3 +162,77 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+// 📌 About Description Popup
+  void _showAboutDescription(BuildContext context) {
+    showCupertinoDialog(
+      context: context,
+      builder: (_) => CupertinoAlertDialog(
+        title: Text('About Teleganda '),
+        content: Text('This is clone of the Telegram app built using Flutter.'),
+        actions: [
+          CupertinoDialogAction(
+            child: Text('Close'),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// Include the DevelopersPage, StoriesSection, and ChatList class code as it is.
+
+
+class DevelopersPage extends StatefulWidget {
+  @override
+  _DevelopersPageState createState() => _DevelopersPageState();
+}
+
+class _DevelopersPageState extends State<DevelopersPage> {
+  List<Map<String, String>> developers = [
+    {
+      'name': 'James',
+      'image': 'assets/dev1.jpg',
+      'role': 'Frontend Developer',
+      'address': '123 Main St, Cityville',
+      'age': '28',
+      'contact': '123-456-7890',
+      'email': 'james@example.com'
+    },
+    {
+      'name': 'Paul',
+      'image': 'assets/dev2.jpg',
+      'role': 'Backend Developer',
+      'address': '456 Oak St, Townsville',
+      'age': '32',
+      'contact': '987-654-3210',
+      'email': 'paul@example.com'
+    },
+    {
+      'name': 'Aira',
+      'image': 'assets/dev3.jpg',
+      'role': 'UI/UX Designer',
+      'address': '789 Pine St, Villagetown',
+      'age': '26',
+      'contact': '555-123-4567',
+      'email': 'aira@example.com'
+    },
+    {
+      'name': 'Chris',
+      'image': 'assets/dev4.jpg',
+      'role': 'Project Manager',
+      'address': '101 Maple St, Citytown',
+      'age': '35',
+      'contact': '666-234-5678',
+      'email': 'chris@example.com'
+    },
+    {
+      'name': 'Rein',
+      'image': 'assets/dev5.jpg',
+      'role': 'Full Stack Developer',
+      'address': '202 Birch St, Uptown',
+      'age': '30',
+      'contact': '777-345-6789',
+      'email': 'rein@example.com'
+    },
+  ];
