@@ -104,5 +104,37 @@ class _TelegramLoginState extends State<TelegramLogin>
     blurRadius: 8,
     spreadRadius: 2,
     ),
+     ],
+    ),
+
+      child: CupertinoTextField(
+        controller: controller,
+        obscureText: obscureText,
+        padding: const EdgeInsets.all(12),
+        prefix: prefix,
+        suffix: suffix,
+        decoration: BoxDecoration(
+          color: CupertinoColors.systemGrey6,
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
+    );
+    },
+    ),
+      Positioned(
+        left: 45, // ✅ Pinalayo sa icon para hindi matakpan
+        top: isHovering || controller.text.isNotEmpty ? 0 : 18,
+        child: AnimatedDefaultTextStyle(
+          duration: const Duration(milliseconds: 200),
+          style: TextStyle(
+            fontSize: isHovering || controller.text.isNotEmpty ? 12 : 16,
+            color: Colors.blue,
+            fontWeight: FontWeight.bold,
+          ),
+          child: Text(placeholder),
+        ),
+      ),
     ],
     ),
+    );
+  }
