@@ -340,4 +340,29 @@ class _DevelopersPageState extends State<DevelopersPage> {
     );
   }
 }
+// 📌 Stories Section
+// 📌 Stories Section
+class StoriesSection extends StatelessWidget {
+  final List<String> stories = [
+    'assets/s1.jpg',
+    'assets/s10.jpg',
+    'assets/s2.jpg',
+    'assets/s3.jpg', // Additional story image
+    'assets/s4.jpg', // Additional story image
+    'assets/s5.jpg', // Additional story image
+    'assets/s6.jpg', // Additional story image
+    'assets/s7.jpg', // Additional story image
+    'assets/s8.jpg', // Additional story image
+    'assets/s9.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+    'assets/s10.jpg', // Additional story image
+  ];
 
