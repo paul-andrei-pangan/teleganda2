@@ -406,3 +406,27 @@ class StoriesSection extends StatelessWidget {
     shape: BoxShape.circle,
     border: Border.all(color: Colors.blue, width: 2), // Border outline
     ),
+      child: ClipOval(
+        child: Image.asset(
+          story,
+          width: 60,
+          height: 60,
+          fit: BoxFit.cover,
+          errorBuilder: (context, error, stackTrace) {
+            return Icon(Icons.error, size: 50, color: Colors.red);
+          },
+        ),
+      ),
+    ),
+    ),
+      SizedBox(height: 5),
+      Text("Friend", style: TextStyle(fontSize: 12)),
+    ],
+    ),
+    ),
+    )),
+        ],
+    );
+  }
+}
+
