@@ -90,3 +90,39 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+  // 📌 Sidebar Item Helper
+  Widget _sidebarItem(BuildContext context, IconData icon, String text, Function(BuildContext) onTap) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: GestureDetector(
+        onTap: () => onTap(context),
+        child: Row(
+          children: [
+            Icon(icon, size: 24, color: Colors.white),
+            SizedBox(width: 10),
+            Text(text, style: TextStyle(fontSize: 18, color: Colors.white)),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // 📌 Open Settings (Functional OK Button)
+  void _openSettings(BuildContext context) {
+    Navigator.pop(context); // Close Sidebar
+    showCupertinoDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+        title: Text('Settings'),
+        content: Text('Settings page is under development.'),
+        actions: [
+          CupertinoDialogAction(
+            child: Text('OK'),
+            onPressed: () {
+              Navigator.pop(context); // ✅ Functional OK button
+            },
+          ),
+        ],
+      ),
+    );
+  }
