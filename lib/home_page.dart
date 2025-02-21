@@ -55,3 +55,38 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+  void _showSidebar(BuildContext context) {
+    showCupertinoModalPopup(
+      context: context,
+      builder: (context) => Align(
+        alignment: Alignment.centerLeft,
+        child: Container(
+          width: 250,
+          height: double.infinity,
+          color: Colors.grey[900], // Dark gray sidebar
+          padding: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: CircleAvatar(
+                  radius: 40,
+                  backgroundImage: AssetImage('assets/profile1.jpg'),
+                ),
+              ),
+              SizedBox(height: 20),
+              _sidebarItem(context, CupertinoIcons.settings, 'Settings', _openSettings),
+              _sidebarItem(context, CupertinoIcons.person_2, 'Developers', _showDevelopers),
+              Spacer(),
+              Center(
+                child: CupertinoButton(
+                  child: Text('Logout', style: TextStyle(color: Colors.red)),
+                  onPressed: () => _showLogoutPopup(context),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
