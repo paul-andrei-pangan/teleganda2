@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
               Center(
                 child: CircleAvatar(
                   radius: 40,
-                  backgroundImage: AssetImage('assets/profile1.jpg'),
+                  backgroundImage: AssetImage('images/profile.jpg'),
                 ),
               ),
               SizedBox(height: 20),
