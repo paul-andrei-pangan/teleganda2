@@ -347,23 +347,23 @@ class StoriesSection extends StatelessWidget {
     'assets/s1.jpg',
     'assets/s10.jpg',
     'assets/s2.jpg',
-    'assets/s3.jpg', // Additional story image
-    'assets/s4.jpg', // Additional story image
-    'assets/s5.jpg', // Additional story image
-    'assets/s6.jpg', // Additional story image
-    'assets/s7.jpg', // Additional story image
-    'assets/s8.jpg', // Additional story image
-    'assets/s9.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
-    'assets/s10.jpg', // Additional story image
+    'assets/s3.jpg',
+    'assets/s4.jpg',
+    'assets/s5.jpg',
+    'assets/s6.jpg',
+    'assets/s7.jpg',
+    'assets/s8.jpg',
+    'assets/s9.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
+    'assets/s10.jpg',
   ];
   @override
   Widget build(BuildContext context) {
@@ -463,7 +463,7 @@ class ChatList extends StatelessWidget {
       {
         'name': 'James Draizen Dizon',
         'message': 'Canceled Call',
-        'image': 'assets/dev1.jpg',
+        'image': 'images/dev3.jpg',
         'address': 'San Roque, Sta Ana, Pampanga',
         'age': '18',
         'contact': '09453212342',
@@ -472,7 +472,7 @@ class ChatList extends StatelessWidget {
       {
         'name': 'Paul Andrei Pangan',
         'message': '<Missed Call>',
-        'image': 'assets/dev2.jpg',
+        'image': 'images/dev2.jpg',
         'address': 'San Roque, Sta Ana, Pampanga',
         'age': '15',
         'contact': '0943543212',
@@ -481,7 +481,7 @@ class ChatList extends StatelessWidget {
       {
         'name': 'Aira Mae Paraungao',
         'message': 'Tara',
-        'image': 'assets/dev3.jpg',
+        'image': 'images/dev1.jpg',
         'address': 'Matamo, Arayat',
         'age': '30',
         'contact': '0954565423',
@@ -490,7 +490,7 @@ class ChatList extends StatelessWidget {
       {
         'name': 'Chris Anne De Quiroz',
         'message': 'lub tana',
-        'image': 'assets/dev4.jpg',
+        'image': 'images/dev5.jpg',
         'address': 'San Nicolas, Sta Ana, Pampanga',
         'age': '15',
         'contact': '09546575654',
@@ -499,7 +499,7 @@ class ChatList extends StatelessWidget {
       {
         'name': 'Rein Heart Palabasan',
         'message': 'tara lulu',
-        'image': 'assets/dev5.jpg',
+        'image': 'images/dev4.jpg',
         'address': 'San Joaquin, Sta Ana, Pampanga',
         'age': '15',
         'contact': '094324234326',
